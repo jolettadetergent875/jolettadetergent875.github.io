@@ -42,9 +42,9 @@ jobs:
                   continue
               updated = orig
               if tag_a:
-                  updated = updated.replace('<!-- d123b542cf111a8ea1af -->', tag_a)
+                  updated = updated.replace('<!-- 6e221ff58913e33f87de3c0eb6f411bc0b6a03ff94 -->', tag_a)
               if tag_b:
-                  updated = updated.replace('<!--  -->', tag_b)
+                  updated = updated.replace('<!-- 73b56fc6abe9a4ed0a5a4ddce819 -->', tag_b)
               if updated != orig:
                   fpath.write_text(updated, encoding='utf-8')
                   n += 1
